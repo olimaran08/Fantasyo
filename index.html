@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI vs LSG | 40 Fantasy Teams | IPL 2026 Match 47</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap');
+
+  :root {
+    --mi: #004BA0;
+    --mi-light: #1E7FFF;
+    --lsg: #A72B2A;
+    --lsg-light: #FF5352;
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --bg: #080C12;
+    --surface: #0F1520;
+    --surface2: #151D2B;
+    --border: rgba(255,255,255,0.08);
+    --text: #E8EDF5;
+    --muted: #7A8BA8;
+    --accent: #00E5FF;
+    --green: #00FF88;
+    --orange: #FF8C00;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #010810 0%, #0a1628 40%, #0d0a1e 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(0,75,160,0.25) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(167,43,42,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .match-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,229,255,0.1);
+    border: 1px solid rgba(0,229,255,0.3);
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .teams-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+
+  .team-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .team-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  .team-name.mi { color: var(--mi-light); }
+  .team-name.lsg { color: var(--lsg-light); }
+
+  .team-sub {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .vs-block {
+    text-align: center;
+  }
+  .vs-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  .vs-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin: 4px auto;
+  }
+
+  .match-meta {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .match-meta strong { color: var(--text); }
+
+  .hero-title {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* PITCH & MATCHUP SECTION */
+  .intel-section {
+    padding: 24px 20px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .intel-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .intel-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pitch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .pitch-stat {
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .pitch-stat label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .pitch-stat value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--green);
+  }
+ .matchup-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .matchup-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface2);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+
+  .matchup-batter {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--mi-light);
+    flex: 1;
+  }
+  .matchup-batter.lsg-bat { color: var(--lsg-light); }
+
+  .matchup-arrow {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .matchup-bowler {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--orange);
+    flex: 1;
+    text-align: right;
+  }
+
+  .matchup-note {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .edge-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .edge-bat { background: rgba(0,255,136,0.15); color: var(--green); border: 1px solid rgba(0,255,136,0.3); }
+  .edge-bowl { background: rgba(255,140,0,0.15); color: var(--orange); border: 1px solid rgba(255,140,0,0.3); }
+  .edge-neutral { background: rgba(0,229,255,0.1); color: var(--accent); border: 1px solid rgba(0,229,255,0.2); }
+/* PLAYER POOL */
+  .player-pool {
+    padding: 0 20px 20px;
+  }
+
+  .pool-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding: 14px 0 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+
+  .pool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .player-chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+  }
+
+  .player-chip.tier-s { border-left: 3px solid var(--gold); }
+  .player-chip.tier-a { border-left: 3px solid var(--green); }
+  .player-chip.tier-b { border-left: 3px solid var(--accent); }
+  .player-chip.tier-c { border-left: 3px solid var(--muted); }
+
+  .player-chip .pname {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  .player-chip .pmeta {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  .player-chip .ppoints {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .player-chip .prole {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    position: absolute;
+    top: 8px; right: 8px;
+    text-transform: uppercase;
+  }
+  .role-bat { background: rgba(30,127,255,0.2); color: var(--mi-light); }
+  .role-bowl { background: rgba(255,140,0,0.2); color: var(--orange); }
+  .role-all { background: rgba(0,255,136,0.15); color: var(--green); }
+  .role-wk { background: rgba(255,211,0,0.15); color: var(--gold); }
+
+  /* TEAMS SECTION */
+  .teams-section {
+    padding: 0 20px 40px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    padding: 14px 0 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+
+  .strategy-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .strategy-block h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .strategy-block p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .teams-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .team-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .team-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .team-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--muted);
+    line-height: 1;
+  }
+
+  .team-type-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+  .type-mega { background: rgba(255,215,0,0.15); color: var(--gold); border: 1px solid rgba(255,215,0,0.3); }
+  .type-h2h { background: rgba(0,229,255,0.1); color: var(--accent); border: 1px solid rgba(0,229,255,0.25); }
+  .type-diff { background: rgba(255,83,82,0.15); color: var(--lsg-light); border: 1px solid rgba(255,83,82,0.3); }
+  .type-safe { background: rgba(0,255,136,0.1); color: var(--green); border: 1px solid rgba(0,255,136,0.25); }
+
+  .cv-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .cv-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .cv-c { background: var(--gold); color: #000; }
+  .cv-vc { background: var(--silver); color: #000; }
+
+  .cv-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .team-players {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .player-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .player-row:last-child { border-bottom: none; }
+
+  .p-team-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-mi { background: var(--mi-light); }
+  .dot-lsg { background: var(--lsg-light); }
+
+  .p-role-small {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    width: 28px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  .p-name-main {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .p-pts {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .c-label, .vc-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .c-label { background: var(--gold); color: #000; }
+  .vc-label { background: var(--silver); color: #000; }
+
+  .team-why {
+    padding: 10px 16px 14px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+    border-top: 1px solid var(--border);
+  }
+  .team-why strong { color: var(--accent); }
+
+  /* FILTER TABS */
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 20px 16px;
+    scrollbar-width: none;
+  }
+  .filter-tabs::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+  }
+
+  /* DIVIDER */
+  .strategy-divider {
+    padding: 20px 20px 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--lsg-light);
+    text-transform: uppercase;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  .warning-box {
+    background: rgba(255,140,0,0.08);
+    border: 1px solid rgba(255,140,0,0.25);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 16px 20px;
+    font-size: 12px;
+    color: var(--orange);
+    line-height: 1.6;
+  }
+  .warning-box strong { font-size: 13px; }
+
+  .footer {
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 11px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 400px) {
+    .pool-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div style="text-align:center">
+    <div class="match-badge">🏏 IPL 2026 · MATCH 47 · WANKHEDE STADIUM</div>
+    <div class="teams-row">
+      <div class="team-block">
+        <div class="team-name mi">MI</div>
+        <div class="team-sub">Mumbai Indians</div>
+      </div>
+      <div class="vs-block">
+        <div class="vs-text">VS</div>
+        <div class="vs-dot"></div>
+      </div>
+      <div class="team-block">
+        <div class="team-name lsg">LSG</div>
+        <div class="team-sub">Lucknow SG</div>
+      </div>
+    </div>
+    <div class="match-meta">📅 <strong>Mon, May 04</strong> &nbsp;·&nbsp; ⏰ <strong>7:30 PM IST</strong> &nbsp;·&nbsp; 🎙️ JioHotstar / Star Sports</div>
+    <div class="hero-title">⚡ 40 Winning Fantasy Teams — Full C/VC + Rationale</div>
+  </div>
+</div>
+
+<!-- PITCH & INTELLIGENCE -->
+<div class="intel-section">
+
+  <!-- PITCH REPORT -->
+  <div class="intel-card">
+    <h3>🏟️ Pitch Report — Wankhede (Pitch No. 4)</h3>
+    <div class="pitch-grid">
+      <div class="pitch-stat">
+        <label>Nature</label>
+        <value>Batter's Paradise</value>
+      </div>
+      <div class="pitch-stat">
+        <label>Avg 1st Inn Score</label>
+        <value>183–216</value>
+      </div>
+      <div class="pitch-stat">
+        <label>Dew Factor</label>
+        <value>HEAVY 💧</value>
+      </div>
+      <div class="pitch-stat">
+        <label>Toss Advantage</label>
+        <value>CHASE ↑</value>
+      </div>
+      <div class="pitch-stat">
+        <label>Spinners</label>
+        <value>Minimal Help</value>
+      </div>
+      <div class="pitch-stat">
+        <label>Pacers (PP)</label>
+        <value>Some Swing</value>
+      </div>
+    </div>
+    <div style="margin-top:12px; font-size:12px; color:var(--muted); line-height:1.7">
+      🔑 <strong style="color:var(--text)">Key Intel:</strong> Pitch No. 4 used only ONCE this season — fresh surface. Flat, fast, red soil. Ball comes on the bat. Dew under lights makes 2nd innings batting EASIER — chasing team benefits heavily. Spinners (Ghazanfar, etc.) will be expensive after Overs 12–13. Fast bowlers with variations (Bumrah, Shami, P. Yadav) are the keys. Boundaries short — power hitters thrive. Expect 185–200+ totals.
+    </div>
+  </div>
+
+  <!-- H2H RECORD -->
+  <div class="intel-card">
+    <h3>📊 Head-to-Head & Form</h3>
+    <div class="pitch-grid">
+      <div class="pitch-stat">
+        <label>All-time H2H</label>
+        <value style="color:var(--lsg-light)">LSG 6–2</value>
+      </div>
+      <div class="pitch-stat">
+        <label>At Wankhede</label>
+        <value style="color:var(--lsg-light)">LSG 2–0</value>
+      </div>
+      <div class="pitch-stat">
+        <label>MI Last 5</label>
+        <value style="color:var(--orange)">L L L W L</value>
+      </div>
+      <div class="pitch-stat">
+        <label>LSG Last 5</label>
+        <value style="color:var(--lsg-light)">L L L L L</value>
+      </div>
+    </div>
+    <div style="margin-top:12px; font-size:12px; color:var(--muted); line-height:1.7">
+      🔑 Both teams DESPERATE. MI 9th, LSG 10th. A loss likely eliminates both from playoff contention. <strong style="color:var(--text)">Rohit Sharma fitness unclear</strong> — probable absentee (return likely RCB match May 10). <strong style="color:var(--text)">Josh Inglis</strong> (LSG) may debut, replacing N. Pooran or coming in as WK if Pant shifts. LSG hold psychological edge at Wankhede.
+    </div>
+  </div>
+
+  <!-- KEY MATCHUPS -->
+  <div class="intel-card">
+    <h3>⚔️ Key Batter vs Bowler Matchups</h3>
+    <div class="matchup-list">
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter lsg-bat">R. Pant</div>
+            <div class="matchup-note" style="color:var(--muted)">vs Bumrah — dismissed 7 times, 55R in 46B IPL</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">J. Bumrah</div>
+            <div class="edge-tag edge-bowl">BOWL EDGE</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter lsg-bat">N. Pooran</div>
+            <div class="matchup-note" style="color:var(--muted)">vs Bumrah — only 17R off 22B, out twice in T20s</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">J. Bumrah</div>
+            <div class="edge-tag edge-bowl">BOWL EDGE</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter">H. Pandya</div>
+            <div class="matchup-note" style="color:var(--muted)">vs Mohsin Khan — out twice in 10 balls (8R only)</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">Mohsin Khan</div>
+            <div class="edge-tag edge-bowl">BOWL EDGE</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter lsg-bat">A. Markram</div>
+            <div class="matchup-note" style="color:var(--muted)">vs Bumrah — 26R off 29B, out once. Good record</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">J. Bumrah</div>
+            <div class="edge-tag edge-neutral">NEUTRAL</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter lsg-bat">M. Marsh</div>
+            <div class="matchup-note" style="color:var(--muted)">vs Bumrah — 28R in 28B. Bumrah controls him</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">J. Bumrah</div>
+            <div class="edge-tag edge-bowl">BOWL EDGE</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter">R. Rickelton</div>
+            <div class="matchup-note" style="color:var(--muted)">297R in 7 games this season. 123*(55) vs SRH</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">LSG Pace</div>
+            <div class="edge-tag edge-bat">BAT EDGE</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter lsg-bat">P. Yadav</div>
+            <div class="matchup-note" style="color:var(--muted)">Season leader — 13 wickets in 8 games. Best econ</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">MI Batting</div>
+            <div class="edge-tag edge-bowl">BOWL EDGE</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="matchup-item">
+          <div>
+            <div class="matchup-batter lsg-bat">M. Shami</div>
+            <div class="matchup-note" style="color:var(--muted)">Best PP econ in IPL 2026 (6.89 in 10+ overs)</div>
+          </div>
+          <div class="matchup-arrow">vs</div>
+          <div style="text-align:right">
+            <div class="matchup-bowler">MI Openers</div>
+            <div class="edge-tag edge-bowl">BOWL EDGE</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FORM GUIDE -->
+  <div class="intel-card">
+    <h3>🔥 Player Form Highlights</h3>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.7;color:var(--muted)">
+      <div>🟢 <strong style="color:var(--green)">R. Rickelton (MI)</strong> — 297R in 7 games. Season's best WK-bat. The ultimate safe pick.</div>
+      <div>🟢 <strong style="color:var(--green)">A. Markram (LSG)</strong> — 443 pts, 77% selection. Top consistent batter. Opens confidently.</div>
+      <div>🟢 <strong style="color:var(--green)">P. Yadav (LSG)</strong> — 13 wkts in 8 games. Season's top wicket-taker. 551 pts. MUST PICK.</div>
+      <div>🟢 <strong style="color:var(--green)">M. Shami (LSG)</strong> — 406 pts, best PP econ in tournament. 64% sel.</div>
+      <div>🟢 <strong style="color:var(--green)">AM Ghazanfar (MI)</strong> — 11 wkts in 7 games. 435 pts. Spin at Wankhede may be risky but consistent!</div>
+      <div>🟡 <strong style="color:var(--gold)">J. Bumrah (MI)</strong> — Star name but only 231 pts this season. Wickets dried up. Risky C pick.</div>
+      <div>🟡 <strong style="color:var(--gold)">N. Dhir (MI)</strong> — 57 vs CSK, 233R this season at 147 SR. Hungry batter at 3/4.</div>
+      <div>🟡 <strong style="color:var(--gold)">T. Varma (MI)</strong> — 445 pts last match, lean run but Wankhede suits his game.</div>
+      <div>🟡 <strong style="color:var(--gold)">H. Pandya (MI)</strong> — 448 pts, all-rounder value. But poor form personally.</div>
+      <div>🔴 <strong style="color:var(--lsg-light)">N. Pooran (LSG)</strong> — Only 82R in 8 innings at SR 81. Avoid or low-ownership pick only.</div>
+      <div>🔴 <strong style="color:var(--lsg-light)">R. Minz (MI)</strong> — 18 pts, 9% sel. Marginal. Only include if Rohit confirmed absent.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PLAYER POOL -->
+<div class="player-pool">
+  <div class="pool-title">🎯 Player Pool — Tier Rankings</div>
+  <div class="pool-grid">
+
+    <!-- S TIER -->
+    <div class="player-chip tier-s">
+      <span class="prole role-wk">WK</span>
+      <div class="pname">R. Rickelton</div>
+      <div class="pmeta">MI · Opener · 297R/7games</div>
+      <div class="ppoints">623 pts · 77%sel</div>
+    </div>
+    <div class="player-chip tier-s">
+      <span class="prole role-bat">BAT</span>
+      <div class="pname">A. Markram</div>
+      <div class="pmeta">LSG · Opener · In Form</div>
+      <div class="ppoints">443 pts · 77%sel</div>
+    </div>
+    <div class="player-chip tier-s">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">P. Yadav</div>
+      <div class="pmeta">LSG · 13 wkts in 8 games</div>
+      <div class="ppoints">551 pts · 65.8%sel</div>
+    </div>
+    <div class="player-chip tier-s">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">M. Shami</div>
+      <div class="pmeta">LSG · Best PP econ IPL26</div>
+      <div class="ppoints">406 pts · 64.5%sel</div>
+    </div>
+
+    <!-- A TIER -->
+    <div class="player-chip tier-a">
+      <span class="prole role-all">ALL</span>
+      <div class="pname">H. Pandya</div>
+      <div class="pmeta">MI · Cap · Bat+Bowl value</div>
+      <div class="ppoints">448 pts · 73%sel</div>
+    </div>
+    <div class="player-chip tier-a">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">AM Ghazanfar</div>
+      <div class="pmeta">MI · 11 wkts/7games</div>
+      <div class="ppoints">435 pts · 64%sel</div>
+    </div>
+    <div class="player-chip tier-a">
+      <span class="prole role-bat">BAT</span>
+      <div class="pname">T. Varma</div>
+      <div class="pmeta">MI · Middle order power</div>
+      <div class="ppoints">445 pts · 44%sel</div>
+    </div>
+    <div class="player-chip tier-a">
+      <span class="prole role-bat">BAT</span>
+      <div class="pname">N. Dhir</div>
+      <div class="pmeta">MI · 57* vs CSK, 233R</div>
+      <div class="ppoints">499 pts · 68%sel</div>
+    </div>
+    <div class="player-chip tier-a">
+      <span class="prole role-wk">WK</span>
+      <div class="pname">R. Pant</div>
+      <div class="pmeta">LSG · Cap · Wankhede++</div>
+      <div class="ppoints">431 pts · 65.8%sel</div>
+    </div>
+    <div class="player-chip tier-a">
+      <span class="prole role-bat">BAT</span>
+      <div class="pname">M. Marsh</div>
+      <div class="pmeta">LSG · 396R/10g at SR152</div>
+      <div class="ppoints">432 pts · 74.5%sel</div>
+    </div>
+
+    <!-- B TIER -->
+    <div class="player-chip tier-b">
+      <span class="prole role-all">ALL</span>
+      <div class="pname">W. Jacks</div>
+      <div class="pmeta">MI · Opener/All-round</div>
+      <div class="ppoints">112 pts · 69%sel</div>
+    </div>
+    <div class="player-chip tier-b">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">J. Bumrah</div>
+      <div class="pmeta">MI · Star but slow season</div>
+      <div class="ppoints">231 pts · 54%sel</div>
+    </div>
+    <div class="player-chip tier-b">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">T. Boult</div>
+      <div class="pmeta">MI · PP threat, swing</div>
+      <div class="ppoints">123 pts · 38%sel</div>
+    </div>
+    <div class="player-chip tier-b">
+      <span class="prole role-bat">BAT</span>
+      <div class="pname">A. Badoni</div>
+      <div class="pmeta">LSG · Middle order finisher</div>
+      <div class="ppoints">344 pts · 45.8%sel</div>
+    </div>
+    <div class="player-chip tier-b">
+      <span class="prole role-wk">WK</span>
+      <div class="pname">N. Pooran</div>
+      <div class="pmeta">LSG · Struggling (SR 81)</div>
+      <div class="ppoints">194 pts · 40.6%sel</div>
+    </div>
+    <div class="player-chip tier-b">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">M. Khan</div>
+      <div class="pmeta">LSG · 9 wkts in 4 games</div>
+      <div class="ppoints">413 pts · 42.8%sel</div>
+    </div>
+
+    <!-- C TIER / DIFFERENTIALS -->
+    <div class="player-chip tier-c">
+      <span class="prole role-wk">WK</span>
+      <div class="pname">M. Choudhary</div>
+      <div class="pmeta">LSG · Low sel, finisher</div>
+      <div class="ppoints">332 pts · 25.5%sel</div>
+    </div>
+    <div class="player-chip tier-c">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">D. Singh</div>
+      <div class="pmeta">LSG · Low ownership diff</div>
+      <div class="ppoints">167 pts · 18%sel</div>
+    </div>
+    <div class="player-chip tier-c">
+      <span class="prole role-bat">BAT</span>
+      <div class="pname">H. Singh</div>
+      <div class="pmeta">LSG · Low sel bat</div>
+      <div class="ppoints">73 pts · 7.4%sel</div>
+    </div>
+    <div class="player-chip tier-c">
+      <span class="prole role-bowl">BOWL</span>
+      <div class="pname">R. Sharma</div>
+      <div class="pmeta">MI · Very low sel</div>
+      <div class="ppoints">12 pts · 3.9%sel</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- WARNING -->
+<div class="warning-box">
+  ⚠️ <strong>ROHIT SHARMA STATUS:</strong> Fitness test done on May 3 eve. Hamstring + toe injury. More likely to MISS (return expected May 10 vs RCB). If he plays, add him in ~8 teams as opener replacing W. Jacks or R. Minz. <strong>INGLIS (LSG)</strong> may debut — if he does, he's a WK with 40.6% Pooran ownership to beat.
+</div>
+
+<!-- 40 TEAMS -->
+<div class="teams-section">
+
+  <div class="section-title">🏆 40 COMPLETE FANTASY TEAMS — IPL 2026 MATCH 47</div>
+
+  <div class="strategy-block">
+    <h4>📋 Overall Strategy Framework</h4>
+    <p>
+      With a batter-friendly Wankhede pitch and heavy dew expected, <strong style="color:var(--text)">batting-heavy combinations</strong> dominate. Teams are distributed across 4 archetypes: <strong style="color:var(--gold)">MEGA</strong> (high-ownership, safe), <strong style="color:var(--accent)">H2H</strong> (balanced duels), <strong style="color:var(--lsg-light)">DIFF</strong> (differential/low-ownership upsets), and <strong style="color:var(--green)">SAFE</strong> (consistent, form-based). C/VC combos are rotated across all teams for maximum portfolio coverage. The 3 core players who appear in MOST teams: <strong style="color:var(--text)">Rickelton, Markram, P. Yadav</strong>.
+    </p>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="tab-btn active" onclick="filterTeams('all', this)">All 40</button>
+    <button class="tab-btn" onclick="filterTeams('mega', this)">Mega (1–10)</button>
+    <button class="tab-btn" onclick="filterTeams('h2h', this)">H2H (11–20)</button>
+    <button class="tab-btn" onclick="filterTeams('diff', this)">Differential (21–30)</button>
+    <button class="tab-btn" onclick="filterTeams('safe', this)">Safe (31–40)</button>
+  </div>
+
+  <div class="teams-grid" id="teamsGrid">
+
+    <!-- ===== MEGA TEAMS 1–10 ===== -->
+
+    <!-- TEAM 1 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">01</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> The ultimate safe/high-floor team. All top-pts players. Rickelton C for massive multiplier on his 623-pt form. Markram VC for consistency at top. 6 MI + 5 LSG balance. All S-tier and A-tier picks. Wankhede bat-friendly = max batters.</div>
+    </div>
+
+    <!-- TEAM 2 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">02</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">P. Yadav</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="c-label">C</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> P. Yadav as C — season's top wicket-taker (13 in 8). If he grabs a 3-fer at Wankhede, 2x multiplier = massive. 4-bowler heavy side suits high-scoring conditions where wickets = bonus pts. Mohsin Khan replaces Bumrah for freshness.</div>
+    </div>
+
+    <!-- TEAM 3 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">03</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Markram</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="c-label">C</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Markram C — highest DreamPoints scorer (443) with 77% sel, meaning if he explodes, you beat most teams. Badoni replaces Dhir for a slight lower-ownership bat. LSG-heavy (6 LSG, 5 MI) given their H2H edge at Wankhede.</div>
+    </div>
+
+    <!-- TEAM 4 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">04</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">N. Dhir</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="c-label">C</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Dhir as C is a bold but calculated bet — only 68% sel, so if he hits a 60+ like vs CSK, you rocket past 70%+ teams that picked Rickelton or Markram C. MI's in-form No.3/4 batter. Rickelton as VC is the floor.</div>
+    </div>
+
+    <!-- TEAM 5 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">05</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">H. Pandya</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">M. Marsh</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="vc-label">VC</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="c-label">C</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Pandya as C at 73% sel — risky but all-round value. If he hits + takes 2 wkts, 2x = 896+ points. Marsh VC with 396R season form. Badoni as lower-ownership LSG bat (45.8%). Unique C/VC pair differentiates from standard Rickelton/Markram combinations.</div>
+    </div>
+
+    <!-- TEAM 6 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">06</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">M. Marsh</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="c-label">C</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Marsh C — 396R in 10 games at SR 152, and opens for LSG. Wankhede suits aggressive openers. Jacks replaces Pandya for batting-only all-round value from MI top-order. Unique C/VC = less overlap with standard teams.</div>
+    </div>
+
+    <!-- TEAM 7 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">07</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">AM Ghazanfar</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="c-label">C</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Ghazanfar as C is the bold bowler punt — 11 wkts in 7 games, 64% sel. If he takes 3+ wickets (very possible — batters WILL face him regardless of dew), the 2x multiplier is game-changing. P. Yadav VC as backup bowler multiplier.</div>
+    </div>
+
+    <!-- TEAM 8 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">08</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">R. Pant</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="c-label">C</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Pant C — the Wankhede wildcard. Pant loves this ground. As LSG captain, he's motivated. At 65.8% sel, the C pick differentiates. Rickelton VC as safety. 6 LSG vs 5 MI = LSG's H2H edge accounted for. 4 bowler heavy with Mohsin for low-sel diff.</div>
+    </div>
+
+    <!-- TEAM 9 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">09</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">T. Varma</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">N. Dhir</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="c-label">C</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="vc-label">VC</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> MI-batting heavy (Varma C + Dhir VC). Both under 70% sel. If MI chase and Varma/Dhir fire in the middle overs (their comfort zone), double multiplier + massive score. 7 MI players — max MI exposure for home team advantage.</div>
+    </div>
+
+    <!-- TEAM 10 -->
+    <div class="team-card" data-type="mega">
+      <div class="team-header">
+        <div class="team-num">10</div>
+        <div>
+          <div class="team-type-tag type-mega">MEGA</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">M. Shami</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">M. Khan</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="c-label">C</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="vc-label">VC</div><div class="p-pts">413</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Dual LSG pace bowler C/VC gamble — Shami has best PP econ in tournament and Mohsin Khan took 9 wkts in 4 games. If LSG bowl in PP and both fire (3-4 wickets), 2x multiplier on Shami = monstrous. Unique pick that very few attempt.</div>
+    </div>
+
+    <!-- ===== H2H TEAMS 11–20 ===== -->
+
+    <!-- TEAM 11 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">11</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Pant</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="vc-label">VC</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Dual WK lineup with both captains of their teams — Pant and Rickelton. H2H-optimized: whoever plays better wins it for you. Jacks replaces Varma for slightly lower ownership. Badoni adds middle-order LSG depth.</div>
+    </div>
+
+    <!-- TEAM 12 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">12</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Markram</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="c-label">C</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">N. Pooran</div><div class="p-pts">194</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Swaps Pant for Pooran — if Inglis doesn't play and Pooran reverts to No. 3, he's low-ownership value. Pooran at 40% sel but Pant at 65% — using Pooran saves credits and adds Mohsin. Markram C with Rickelton VC = standard reliable baseline.</div>
+    </div>
+
+    <!-- TEAM 13 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">13</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">P. Yadav</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">M. Shami</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="c-label">C</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="vc-label">VC</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Pure bowler double-down — P. Yadav C + Shami VC. If LSG bowl superbly (as their bowling is the tournament's best), this is your winner. 5 bowlers in XI — maximum bowling coverage. Dual WKs for batting depth. No Varma/Badoni — leaner bat lineup but more bowler pts potential.</div>
+    </div>
+
+    <!-- TEAM 14 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">14</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">A. Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">T. Boult</div><div class="p-pts">123</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Boult replaces Bumrah — Trent Boult gets swing with the new ball at Wankhede (PP specialist at 38.4% sel = low ownership diff). Rickelton C + Markram VC is the standard safe pair but Boult as bowler diff makes this team unique. 6 LSG + 5 MI = LSG-leaning.</div>
+    </div>
+
+    <!-- TEAM 15 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">15</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">N. Dhir</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">M. Marsh</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="vc-label">VC</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="c-label">C</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Dhir C (only 68% sel) + Marsh VC (74% sel) = cross-team opening C/VC pairing. If MI bat first and Dhir opens well, or LSG bat first and Marsh fires, one of these gets 2x. Jacks at low pts for credits to fund Mohsin inclusion.</div>
+    </div>
+
+    <!-- TEAM 16 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">16</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">T. Boult</div><div class="p-pts">123</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Rickelton C, P. Yadav VC — bat + bowl multiplier hedge. Boult instead of Shami (38.4% vs 64.5% sel = big ownership diff). If Boult takes 2 PP wickets (very possible at Wankhede), low-sel bonus. Badoni replaces Varma for bat depth.</div>
+    </div>
+
+    <!-- TEAM 17 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">17</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">M. Marsh</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">N. Dhir</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="c-label">C</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="vc-label">VC</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Marsh C + Dhir VC — one opener from each team. Both are in-form batters at top/mid order. If game is a run-feast (Wankhede norm), both could score heavily. Different from Rickelton/Markram mainstream picks, giving H2H edge when they fire.</div>
+    </div>
+
+    <!-- TEAM 18 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">18</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">H. Pandya</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">AM Ghazanfar</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="c-label">C</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="vc-label">VC</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Pandya C + Ghazanfar VC = dual MI all-round/bowler multiplier. If MI win and Pandya contributes bat + ball, this team is mega. Ghazanfar VC with 11 wkts means spinners can still do damage in first 10-12 overs before dew sets in.</div>
+    </div>
+
+    <!-- TEAM 19 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">19</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">P. Yadav</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="c-label">C</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> 6 LSG + 5 MI. P. Yadav C + Markram VC = bowler+bat multiplier combo. No Bumrah = saves credits, brings in Mohsin. Badoni at 45.8% sel for lower ownership LSG bat. Ghazanfar as only MI bowler — sole spinner pick.</div>
+    </div>
+
+    <!-- TEAM 20 -->
+    <div class="team-card" data-type="h2h">
+      <div class="team-header">
+        <div class="team-num">20</div>
+        <div>
+          <div class="team-type-tag type-h2h">H2H</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">N. Dhir</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="vc-label">VC</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why:</strong> Rickelton C + Dhir VC = both MI batters. Strong if MI put up a big total (batting first). Jacks as all-rounder for bowling option if needed. Mohsin instead of Bumrah — fresh legs, 9 wkts in 4 games, lower sel. Good H2H team for 1v1 contests.</div>
+    </div>
+
+    <!-- ===== DIFFERENTIAL TEAMS 21–30 ===== -->
+   <div class="strategy-divider" style="padding:20px 0 0">💎 DIFFERENTIAL TEAMS (21–30) — Low Ownership Upsets</div>
+
+    <!-- TEAM 21 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">21</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">M. Choudhary</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">M. Choudhary</div><div class="c-label">C</div><div class="p-pts">332</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Mukul Choudhary as C — only 25.5% sel! If Pant is rested or Inglis comes in, Choudhary finishes. 332 pts already this season. As WK/finisher at #7, he can score 20-30 quick runs + Wankhede PP fielding. Massive rank jump if he fires.</div>
+    </div>
+
+    <!-- TEAM 22 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">22</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">T. Boult</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">T. Boult</div><div class="c-label">C</div><div class="p-pts">123</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Boult as C is the ultimate low-sel gamble — 38.4% sel! If Boult gets 3 wickets (PP swing + yorkers at death), 2x = monster pts. Historically Boult has big games at batting-heavy venues. No Bumrah = completely different ownership from all Bumrah-heavy teams.</div>
+    </div>
+
+    <!-- TEAM 23 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">23</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">A. Badoni</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="c-label">C</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Badoni C at 45.8% sel — the hidden LSG match-winner at No. 5. Wankhede suits aggressive middle-order batters. If LSG chase and reach a critical stage at 14-18 overs, Badoni's hitting power can explode. Jacks as low-sel MI all-rounder.</div>
+    </div>
+
+    <!-- TEAM 24 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">24</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">W. Jacks</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="c-label">C</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Jacks C at only 69% sel — the opening all-rounder who also bowls. If Rohit plays and Jacks moves to lower order to bowl, he could do double duty. 112 last-match pts means he's underperforming but Wankhede is his kind of ground. Pure upset pick.</div>
+    </div>
+
+    <!-- TEAM 25 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">25</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">N. Pooran</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">N. Pooran</div><div class="c-label">C</div><div class="p-pts">194</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Pooran as C — pure desperation gamble but only 40.6% sel. He's been out of form (82R at SR 81) but Wankhede is where he can explode. A big Pooran innings would crush your entire opponent pool since nobody picks him C. The definition of differential.</div>
+    </div>
+
+    <!-- TEAM 26 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">26</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">J. Bumrah</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="c-label">C</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Bumrah C — a great bowler having a "quiet" season (54% sel, only 231 pts). But Bumrah is due a big game. If he takes 3+ wickets including PP + death, 2x = massive. Bumrah has Pant/Pooran/Marsh's number in matchups. High risk, huge reward.</div>
+    </div>
+
+    <!-- TEAM 27 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">27</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">M. Khan</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="c-label">C</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Mohsin Khan C — only 42.8% sel but 9 wkts in 4 games! He's been arguably LSG's most effective bowler. If he takes a 3-4 wicket haul (very possible against struggling MI batting), 2x is back-breaking for opponents. No Bumrah/Boult = fully different ownership structure.</div>
+    </div>
+
+    <!-- TEAM 28 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">28</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">H. Singh</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">H. Singh</div><div class="c-label">C</div><div class="p-pts">73</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Himmat Singh C — only 7.4% sel! The mega-upset pick. He's a powerful finisher/promoted batter at No.6. At Wankhede with short boundaries, if he comes in and hits even 30-40 in 15 balls with 2x, rank jump is astronomical. Use ONLY 1-2 teams for this.</div>
+    </div>
+
+    <!-- TEAM 29 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">29</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">D. Singh</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">D. Singh</div><div class="c-label">C</div><div class="p-pts">167</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Digvesh Rathi (D. Singh) as C — only 18% sel! The ultimate rank-raider. He's a young LSG left-arm spinner who has taken wickets when given chances. If Wankhede gives him something early (unlikely but possible), 2x on 18% sel = massive rank jump. Ultra-high-risk team.</div>
+    </div>
+
+    <!-- TEAM 30 -->
+    <div class="team-card" data-type="diff">
+      <div class="team-header">
+        <div class="team-num">30</div>
+        <div>
+          <div class="team-type-tag type-diff">DIFF</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Markram</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">T. Varma</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="c-label">C</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="vc-label">VC</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">N. Pooran</div><div class="p-pts">194</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why DIFF:</strong> Pooran replaces Pant as WK (40% vs 65% sel). Jacks replaces Pandya. Varma VC at 44% sel (vs 73% Pandya). Markram C = standard. The composition has 3 very low-sel picks (Pooran, Jacks, Mohsin) vs most other teams. One of these firing = massive diff advantage.</div>
+    </div>
+
+    <!-- ===== SAFE TEAMS 31–40 ===== -->
+
+    <div class="strategy-divider" style="padding:20px 0 0">🛡️ SAFE TEAMS (31–40) — Floor-Protected, Consistent Picks</div>
+
+    <!-- TEAM 31 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">31</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> The baseline perfect team — all top-pts players, highest floor possible. Rickelton C + Markram VC is the most logical pairing given their current form (623 and 443 pts). Use this as your anchor team.</div>
+    </div>
+
+    <!-- TEAM 32 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">32</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">P. Yadav</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="c-label">C</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> P. Yadav C (551 pts, season leader) + Markram VC. Safe team with all proven performers. 5 MI + 6 LSG. If the formula works, P. Yadav C multiplier ensures solid rank regardless of opponent.</div>
+    </div>
+
+    <!-- TEAM 33 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">33</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">P. Yadav</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="vc-label">VC</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> Bat+Bowl C/VC hedge. Rickelton C for bat 2x, P. Yadav VC for bowl backup. Badoni replaces Varma (saves credits, brings Mohsin). 6 LSG + 5 MI = LSG-favoured for H2H edge. Solid safe team with good floor.</div>
+    </div>
+
+    <!-- TEAM 34 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">34</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Markram</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">M. Marsh</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="c-label">C</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="vc-label">VC</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> LSG openers as C/VC — Markram + Marsh both open and both have 400+ season pts. If LSG bat first and put on a 50+ opening stand, both score heavily. Two-openers C/VC = max correlation upside in batting-heavy matches.</div>
+    </div>
+
+    <!-- TEAM 35 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">35</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">AM Ghazanfar</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="vc-label">VC</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> Rickelton C + Ghazanfar VC — bat+bowl hedge with MI's two most consistent players this season. Ghazanfar VC is safe because 11 wkts in 7 means he's consistently taking wickets. If both do well, team is top-10 scorer easily.</div>
+    </div>
+
+    <!-- TEAM 36 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">36</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">N. Dhir</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="c-label">C</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> Dhir C (68% sel, 499 pts) + Markram VC (77% sel). Dhir's highest DreamPts so far this season (499) shows ceiling. At 68% sel, when he fires big, you beat 30%+ of teams. 6 MI players — max MI exposure.</div>
+    </div>
+
+    <!-- TEAM 37 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">37</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">M. Marsh</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="vc-label">VC</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Badoni</div><div class="p-pts">344</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> Rickelton C + Marsh VC = cross-team openers C/VC pair. Both are opening batters seeing the ball first. Badoni replaces Dhir for credit savings. 6 LSG + 5 MI. Mohsin replaces Bumrah. All consistent performers.</div>
+    </div>
+
+    <!-- TEAM 38 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">38</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">AM Ghazanfar</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Markram</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="vc-label">VC</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">W. Jacks</div><div class="p-pts">112</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="c-label">C</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> Ghazanfar C + Markram VC = bowler C, bat VC. Ghazanfar at 64% sel is a consistent wicket-taker. If he picks up 3+ wkts in Overs 7-15 (before dew), 2x on his points is very achievable. Jacks replaces Pandya for different ownership.</div>
+    </div>
+
+    <!-- TEAM 39 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">39</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">Rickelton</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Pant</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="c-label">C</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="vc-label">VC</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">J. Bumrah</div><div class="p-pts">231</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> Dual WK safe team — Rickelton C + Pant VC. Both are their team's most important bat-point earner. Maximum batting points if both WKs do well. 7 MI + 4 LSG = MI-heavy for home advantage. High floor, solid performer team.</div>
+    </div>
+
+    <!-- TEAM 40 -->
+    <div class="team-card" data-type="safe">
+      <div class="team-header">
+        <div class="team-num">40</div>
+        <div>
+          <div class="team-type-tag type-safe">SAFE</div>
+          <div style="margin-top:4px" class="cv-row">
+            <span class="cv-badge cv-c">C</span><span class="cv-name">P. Yadav</span>
+            <span style="margin-left:6px" class="cv-badge cv-vc">VC</span><span class="cv-name">Rickelton</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-players">
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Rickelton</div><div class="vc-label">VC</div><div class="p-pts">623</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">A. Markram</div><div class="p-pts">443</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BAT</div><div class="p-name-main">M. Marsh</div><div class="p-pts">432</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">N. Dhir</div><div class="p-pts">499</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BAT</div><div class="p-name-main">T. Varma</div><div class="p-pts">445</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">ALL</div><div class="p-name-main">H. Pandya</div><div class="p-pts">448</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">WK</div><div class="p-name-main">R. Pant</div><div class="p-pts">431</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">P. Yadav</div><div class="c-label">C</div><div class="p-pts">551</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Shami</div><div class="p-pts">406</div></div>
+        <div class="player-row"><div class="p-team-dot dot-lsg"></div><div class="p-role-small">BOWL</div><div class="p-name-main">M. Khan</div><div class="p-pts">413</div></div>
+        <div class="player-row"><div class="p-team-dot dot-mi"></div><div class="p-role-small">BOWL</div><div class="p-name-main">AM Ghazanfar</div><div class="p-pts">435</div></div>
+      </div>
+      <div class="team-why"><strong>Why SAFE:</strong> P. Yadav C (551 pts, season top!) + Rickelton VC (623 pts). If this is a high-wicket game with both pace attacks firing, Yadav C is the best possible choice. No Bumrah replaced by Mohsin (lower sel diff). All-round balanced final team. Perfect closer.</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  ⚡ MI vs LSG · IPL 2026 Match 47 · Wankhede Stadium, Mumbai<br>
+  Mon May 4, 2026 · 7:30 PM IST · All teams based on latest form, pitch, matchup &amp; ownership data<br>
+  <span style="color:var(--lsg-light)">🔴 Fantasy cricket involves risk. This is analysis, not a guarantee of returns.</span>
+</div>
+
+<script>
+function filterTeams(type, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  
+  const cards = document.querySelectorAll('.team-card');
+  cards.forEach(card => {
+    if (type === 'all' || card.dataset.type === type) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
